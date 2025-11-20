@@ -1,9 +1,11 @@
 import { useRef } from "react";
+
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { PresentationControls } from "@react-three/drei";
+
 import MacbookModel16 from "@/components/models/Macbook-16";
 import MacbookModel14 from "@/components/models/Macbook-14";
-import { useGSAP } from "@gsap/react";
 
 const ANIMATION_DURATION = 1;
 const OFFSET_DISTANCE = 5;
