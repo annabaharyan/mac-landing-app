@@ -7,12 +7,15 @@ import { Color, SRGBColorSpace } from "three";
 export default function MacbookModel14(props) {
   const { color } = useMacbookStore();
   const { nodes, materials, scene } = useGLTF(
-    "/models/macbook-14-transformed.glb",
+    `${import.meta.env.BASE_URL}/models/macbook-14-transformed.glb`,
   );
-  const texture = useTexture("/screen.png", (texture) => {
-    texture.colorSpace = SRGBColorSpace;
-    texture.needsUpdate = true;
-  });
+  const texture = useTexture(
+    `${import.meta.env.BASE_URL}/screen.png`,
+    (texture) => {
+      texture.colorSpace = SRGBColorSpace;
+      texture.needsUpdate = true;
+    },
+  );
 
   useEffect(() => {
     scene.traverse((child) => {
@@ -122,4 +125,6 @@ export default function MacbookModel14(props) {
   );
 }
 
-useGLTF.preload("/models/macbook-14-transformed.glb");
+useGLTF.preload(
+  `${import.meta.env.BASE_URL}/models/macbook-14-transformed.glb`,
+);

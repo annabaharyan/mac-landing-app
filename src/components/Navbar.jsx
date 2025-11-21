@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <img src="/logo.svg" alt="Apple logo" />
+        <img src={`${import.meta.env.BASE_URL}/logo.svg`} alt="Apple logo" />
         <ul>
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -14,10 +14,10 @@ const Navbar = () => {
         </ul>
         <div className="flex-center gap-3">
           <button>
-            <img src="/search.svg" alt="Search" />
+            <img src={`${import.meta.env.BASE_URL}/search.svg`} alt="Search" />
           </button>
           <button>
-            <img src="/cart.svg" alt="Cart" />
+            <img src={`${import.meta.env.BASE_URL}/cart.svg`} alt="Cart" />
           </button>
         </div>
       </nav>

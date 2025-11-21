@@ -9,8 +9,14 @@ const Hero = () => {
   return (
     <section id="hero">
       <h1>MacBook Pro</h1>
-      <img src="/title.png" alt="MacBook Pro" />
-      <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
+      <img src={`${import.meta.env.BASE_URL}/title.png`} alt="MacBook Pro" />
+      <video
+        ref={videoRef}
+        src={`${import.meta.env.BASE_URL}/videos/hero.mp4`}
+        autoPlay
+        muted
+        playsInline
+      />
       <button>Buy</button>
       <p>From $1599 or $133/mo for 12 month</p>
     </section>
